@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Gestao.Application.ViewModels.UsuarioViewModel>
+
+@{
+    ViewData["Title"] = "Usuário";
+}
+
+<style>
+    .modal {
+        max-width: 80%;
+    }
+
+</style>
+
+<div>
+    <h2>Usuário</h2>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div>
+            <div class="float-left">
+                <a asp-action="Create" class="btn  btn-primary"></a>
+                <span title="Registro novo" class=""></span> Registro novo
+            </div>
+        </div>
+
+    </div>
+</div>
+<br />
+<div class="container">
+    <div class="">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
