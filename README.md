@@ -1,5 +1,7 @@
 # Clean Architecture (Padrão de projeto)
 
+Sistema de cadastro de usuário simples utilizando clean architecture. 
+
 <h4> Lista usuário </h4>
 
 ![image](https://user-images.githubusercontent.com/99044436/210408554-741d103c-e593-471e-9d5b-945a9ad3d768.png)
