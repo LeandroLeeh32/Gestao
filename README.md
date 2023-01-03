@@ -15,3 +15,8 @@
 <h4> Excluir usuário </h4>
 
 ![image](https://user-images.githubusercontent.com/99044436/210408210-da5d8f28-e942-44c2-8bf5-404812606ae6.png)
+
+<h4> Editar usuário </h4>
+
+![image](https://user-images.githubusercontent.com/99044436/210408931-b708067e-a2f6-4ebc-8577-fa77c1fc721b.png)
+
