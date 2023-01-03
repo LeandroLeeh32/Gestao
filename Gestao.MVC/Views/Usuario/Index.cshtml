@@ -18,8 +18,9 @@
     <div class="col-md-12">
         <div>
             <div class="float-left">
-                <a asp-action="Create" class="btn  btn-primary"></a>
-                <span title="Registro novo" class=""></span> Registro novo
+                <a asp-action="Create" class="btn btn-primary">
+                    <span title="Registro novo" class=""></span> Registro novo
+                </a>
             </div>
         </div>
 
@@ -43,13 +44,29 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>
+                        <td align="left">
                             @Html.DisplayFor(modelItem => item.Id)
                         </td>
-                        <td>
+                        <td align="left">
                             @Html.DisplayFor(modelItem => item.Name)
                         </td>
-                        <td>
+                        <td align="right">
+                            <a asp-action="Details" asp-route-id="@item.Id" title="Detalhes" class="btn btn-primary">
+                                <span class="fas fa-search">
+                                    Detalhes
+                                </span>
+                            </a>
+                            <a asp-action="Edit" asp-route-id="@item.Id" title="Editar" class="btn btn-warning">
+                                <span class="fas fa-edit">
+                                    Editar
+                                </span>
+                            </a>
+
+                            <a asp-action="Delete" asp-route-id="@item.Id" title="Apagar" class="btn btn-danger">
+                                <span class="fas fa-trash-alt">
+                                    Deletar
+                                </span>
+                            </a>
 
                         </td>
                     </tr>
@@ -60,3 +77,4 @@
     </div>
 
 </div>
+

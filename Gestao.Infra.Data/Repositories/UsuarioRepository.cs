@@ -35,8 +35,9 @@ namespace Gestao.Infra.Data.Repositories
 
         void IUsuarioRepository.Remove(int? id)
         {
-            var result = _context.Usuarios.FindAsync(id);
+            var result = _context.Usuarios.FindAsync(id).Result;
             _context.Remove(result);
+            _context.SaveChanges();
         }
 
         void IUsuarioRepository.Update(Usuario usuario)

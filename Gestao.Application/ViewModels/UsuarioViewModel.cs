@@ -11,8 +11,8 @@ namespace Gestao.Application.ViewModels
     public class UsuarioViewModel
     {
         [Required(ErrorMessage ="O nome é obrigatório")]
-        [MinLength(3)]
-        [MaxLength(100)]
+        [MinLength(10, ErrorMessage = "Informar um nome maior que 10 caracteres.")]
+        [MaxLength(60, ErrorMessage = "Informar um nome menor que 60 caracteres.")]
         [DisplayName("Nome do usuário")]
         public string? Name { get; set; }
         public int Id { get; set; }

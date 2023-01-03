@@ -1,0 +1,27 @@
+﻿@model Gestao.Application.ViewModels.UsuarioViewModel
+
+@{
+    ViewData["Title"] = "Excluir usuário";
+}
+
+<h3>Excluir usuário</h3>
+
+<hr />
+<h4>Você tem certeza que deseja excluir o usuário?</h4>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-md-2">
+            @Html.DisplayNameFor(model=> model.Name)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir " class="btn btn-danger" /> | <a asp-action="Index">lista de usuário</a>
+    </form>
+</div>
